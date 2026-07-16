@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activity Log — Role Based API</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="dot"></span>
+        <span>Role Based API</span>
+      </div>
+
+      <nav>
+        <a href="dashboard.html" class="nav-link">Users</a>
+        <a href="logs.html" class="nav-link active">Activity Log</a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="whoami">
+          Signed in as<br />
+          <strong id="whoamiName">—</strong>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="logoutBtn" style="width:100%">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="page-head">
+        <div>
+          <h1>Activity Log</h1>
+          <div class="sub" id="logCountSub">Loading…</div>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="refreshBtn">Refresh</button>
+      </div>
+
+      <div class="panel" id="logWrap">
+        <div class="loading-line">Fetching activity…</div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/logs.js"></script>
+</body>
+</html>
